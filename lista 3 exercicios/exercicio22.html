@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 22</title>
+</head>
+<body>
+    <h1>Urna eletronica </h1>
+
+    <button onclick="VPN()"> Votar na Praça é Nossa </button>
+    <br><br>
+    <button onclick="VZT()"> Votar na Zorra Total </button>
+    <br><br>
+    <span id="SpanVPN"></span>
+    <br><br>
+    <span id="SpanVZT"></span>
+    <br><br>
+    <span id="SpanCont"></span>
+</body>
+</html>
+<script>
+    var votoPN = 0;
+    var votoZT = 0;
+    var contagem = 0; 
+
+
+    function VPN(){
+        votoPN = votoPN +1;
+        contagem ++; 
+        SpanVPN.innerHTML = `Votos na praça é nossa: ${votoPN}<br>`;
+    }
+
+    function VZT(){
+        votoZT = votoZT +1;
+        contagem ++;
+        SpanVZT.innerHTML = `Votos na zorra total: ${votoZT}<br>`;
+        SpanCont.innerHTML = `Todos os votos ${contagem}<br>`;
+    }
+
+</script>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Exercicio 07 </title>
+</head>
+
+    <body>
+
+
+        <h1>Como estarei no futuro?</h1>
+
+
+        <p style="font-size: 20px;" >avaliação continuada </p>
+                <input  id="continuada" type="text"; placeholder="Digite a nota continuada">
+                <br><br>
+
+        <p style="font-size: 20px;" >avaliação semestral </p>
+                <input  id="semestral" type="text"; placeholder="Nota semestral">
+                <br><br>
+        <p style="font-size: 20px;" > Digite seu nome </p>
+                <input  id="nome" type="text"; placeholder="Digite o nome">
+                <br><br>
+
+                <button onclick="media();">média final </button>
+                <br><br>
+
+
+                             <br>
+
+            <span id="spanText"></span>
+
+
+        </div>
+
+
+                <br>
+
+    </body>
+</html>
+
+<script>
+
+
+function media(){ 
+    spanText.innerHTML = ` A média de  ${nome.value}, será de ${(continuada.value * 0.4 + semestral.value * 0.6)}`;
+}
+
+
+
+
+</script>

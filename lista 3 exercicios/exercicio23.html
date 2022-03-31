@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercicio 23</title>
+</head>
+
+<body>
+   
+        <h1> Votação de cantor </h1>
+        <br><br>
+
+        <button onclick="travis();"><img src="https://rollingstone.uol.com.br/media/uploads/travis_scott_foto_jamie_mccarthygetty_images.jpg" height="150px"></button>
+        <span id="spanTravis"></span>
+        <br><br>
+
+        <button onclick="drake();"><img
+                src="https://www.rbsdirect.com.br/filestore/5/7/0/4/7/5/1_4f0395389b7aa66/1574075_fc77065ee6c2ba7.jpg?w=800&h=535&a=c%201x" height="150px"></button>
+        <span id="spanDrake"></span>
+        <br><br>
+
+        <span id="spanTotal"></span>
+
+</body>
+
+</html>
+<script>
+
+    var traviss = 0;
+    var drakes= 0;
+    var tottal = 0;
+
+    spanTravis.innerHTML = `Votos: <b>${traviss}</b>`
+    spanDrake.innerHTML = `Votos: <b>${drakes}</b>`
+    spanTotal.innerHTML = `Total de votos: <b>${tottal}</b`
+
+
+    function travis() {
+        traviss++
+        tottal = traviss + drakes; 
+    spanTravis.innerHTML = `Votos: <b>${traviss}</b>`
+    spanDrake.innerHTML = `Votos: <b>${drakes}</b>`
+    spanTotal.innerHTML = `Total de votos: <b>${tottal}</b`
+    }
+
+    function drake() {
+        drakes++
+        tottal = traviss + drakes;
+    spanTravis.innerHTML = `Votos: <b>${traviss}</b>`
+    spanDrake.innerHTML = `Votos: <b>${drakes}</b>`
+    spanTotal.innerHTML = `Total de votos: <b>${tottal}</b`
+    }
+</script>

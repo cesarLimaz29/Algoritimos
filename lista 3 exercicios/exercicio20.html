@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 20</title>
+</head>
+<body>
+    <h1> Salario </h1>
+
+    <p> Digite seu salario </p>
+<input id="ipt_salario" placeholder="Digite o salario">   
+ <br><br>
+
+ <button onclick="salario()"> Confirmar salário </button>
+ <br> <br>
+
+ <button onclick="Pconta100()"> Pagar conta R$ 100,00 </button>
+ <br> <br>
+
+ <button onclick="Pconta500()"> Pagar conta R$ 500,00 </button>
+ <br> <br>
+
+ <button onclick="loteria()"> Ganhar na loteria </button>
+ <br><br>
+
+ <span id="SpanText"></span>
+</body>
+</html>
+
+<script>
+
+var saldo = 0;
+
+function salario() 
+
+        {
+        saldo = Number (ipt_salario.value);
+        SpanText.innerHTML = `Salario atual em conta: R$ ${saldo.toFixed(2)}`
+        }
+        
+    function Pconta100() 
+
+        {
+        saldo = saldo - 100;
+        SpanText.innerHTML = `Saldo atual: R$ ${saldo.toFixed(2)}`
+        }
+
+    function Pconta500() 
+
+        {
+        saldo = saldo - 500;
+        SpanText.innerHTML = `Saldo atual: R$ ${saldo.toFixed(2)}`
+        }
+
+    function loteria()
+
+        {
+        saldo = saldo  + 2000;
+        SpanText.innerHTML = `Saldo atual: R$ ${saldo.toFixed(2)}`
+        }
+
+
+</script>

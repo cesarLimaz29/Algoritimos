@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+</head>
+<body>
+
+    <h1> Tabuada</h1>
+<p> Digite um numero e veja a sua tabuada </p>
+<input id="numero" placeholder="Digite um numero ">    
+<br> <br>
+
+<button onclick="mostrar()" >Ver Tabuada</button>
+<br> <br>
+
+<span id="spanText"></span>
+</body>
+</html>
+
+<script>
+    function mostrar() {
+    var valor = Number(numero.value);
+
+    var valor1 = 1 * (numero.value);
+    var valor2 = 2 * (numero.value);
+    var valor3 = 3 * (numero.value);
+    var valor4 = 4 * (numero.value);
+    var valor5 = 5 * (numero.value);
+    var valor6 = 6 * (numero.value);
+    var valor7 = 7 * (numero.value);
+    var valor8 = 8 * (numero.value);
+    var valor9 = 9 * (numero.value);
+    var valor10 = 10 * (numero.value);
+
+    spanText.innerHTML = `<p> a tabuada do numero <br> <br> 
+        ${valor} x  1 = ${valor1}<br>
+        ${valor} x 2 =  ${valor2}<br>
+        ${valor} x 3 =  ${valor3}<br>
+        ${valor} x 4 =  ${valor4}<br>
+        ${valor} x 5 =  ${valor5}<br>
+        ${valor} x 6 =  ${valor6}<br>
+        ${valor} x 7 =  ${valor7}<br>
+        ${valor} x 8 =  ${valor8}<br>
+        ${valor} x 9 =  ${valor9}<br>
+        ${valor} x 10 = ${valor10}`
+
+}
+
+</script>

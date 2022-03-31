@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6</title>
+
+</head>
+<body>
+
+    <h1> Frequencia </h1>
+
+    <p> Digite o nome do aluno</p> 
+ <input id="IPTnome" placeholder="Digite o nome do aluno ">
+ <br> 
+    <p> Digite a quantidade de aulas</p>
+ <input id="IPTaulas" placeholder="Quantidade de aulas ">
+ <br> 
+    <p> Digite a quantidade de faltas</p> 
+ <input id="IPTfaltas" placeholder="Quantidade de  faltas ">
+ <br> <br>
+
+ <button onclick="calcular()">Calcular Frequencia </button>
+ <br> <br>
+ <div id="tabom" style="background-color: red; height:20px; "></div>
+ <br> <br>
+ <span id="spanText"> </span>
+ 
+</body>
+</html>
+<script>
+    
+   
+function calcular(){
+    var nome = (IPTnome.value);
+    var aula = Number(IPTaulas.value);
+    var falta = Number(IPTfaltas.value);
+
+  
+    var frequencia = 100 -( falta/aula ) * 100;
+
+spanText.innerHTML = `Olá, ${nome} sua frequencia foi  de  ${frequencia.toFixed(0)} % `
+
+tabom.style.width = frequencia + '%';
+
+}
+</script>
+

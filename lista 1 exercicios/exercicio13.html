@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Exercicio 13</title>
+</head>
+
+    <body>
+        <Center>
+
+        <h1>Brasil x Alemanha</h1>
+
+                <br>
+                        
+                <button style="border-radius: 3px; width: 240px; height: 120px;background-color: rgb(47, 167, 7);" onclick="BR();">Gol do  Brasil!</button>
+
+                    <button style="border-radius: 3px; width: 240px; height: 120px;background-color: rgb(255, 38, 0);" onclick="ALM();">Gol da Alemanha</button>
+                    
+                    <button style="border-radius: 3px; width: 240px; height: 120px" onclick="DELETE();">Limpar</button>
+                    <br>
+            
+                    <b style="font-size: 60px;">Tempo real do jogo: 33:07</b>
+                
+                             <br>           
+
+            <span id="spanText"></span>
+                <br>
+        </Center>
+    </body>
+</html>
+
+<script>
+    
+
+function BR(){ 
+    spanText.innerHTML += '<br>  <b Style=" color:rgb(47, 167, 7);font-size:30px"> Gol do Brasil !! </b> </span>';
+}
+
+function ALM(){ 
+    spanText.innerHTML += '<br>  <b Style="background-color:rgb(255, 38, 0); color:#FFE644;font-size:30px">Gol da Alemanha !! </b> </span>';
+}
+
+function DELETE(){ 
+    spanText.innerHTML =''
+}
+
+</script>   

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+    <title> Exercicio 11 </title>
+</head>
+
+<body style="font-family: 'Fredoka', sans-serif;">
+        <h1> Cofre de moedas </h1>
+
+        <select id="deposito" style="width:18% ;">
+            <option value="0" selected disabled >selecione...</option>
+            <option value="0.05">5 centavos</option>
+            <option value="0.10">10 centavos</option>
+            <option value="0.25">25 centavos</option>
+            <option value="0.50">50 centavos</option>
+            <option value="1.00">1 real</option>
+        </select>
+        <br><br>
+        <button onclick="depositar()"> Depositar </button> <br><br>
+        <button onclick="gastar()"> Gastar </button>
+
+        <br><br>
+      
+          <span id="saldo">O saldo do cofre é de: </span>  
+        <br>
+         <span id="contador">A quantidade de operações é: </span>  
+        <br>
+         <span id="media"> Media dos depositos: </span> 
+        
+    
+
+</body>
+
+</html>
+<script>
+
+    var ssaldo = 0;
+    var ccontador = 0;
+
+    function depositar() {
+        ccontador ++;
+        ssaldo = ssaldo + Number (deposito.value);
+        var mmedia = (ssaldo / ccontador)
+
+        saldo.innerHTML = `O saldo cofre é de:  ${ssaldo.toFixed(2)}`
+        contador.innerHTML = `A quantidade de operações é: ${ccontador}`
+        media.innerHTML = `Media dos depositos: ${mmedia}`
+    } 
+    
+        function gastar () {
+            var media = 0;
+            var ccontador = 0;
+            var ssaldo = 0;
+            
+            saldo.innerHTML = `O saldo cofre é de: ${ssaldo}`
+            contador.innerHTML = `A quantidade de operações é: ${ccontador}`
+            media.innerHTML = `Media dos depositos:${media}`
+            }
+
+       
+
+
+    
+
+</script>

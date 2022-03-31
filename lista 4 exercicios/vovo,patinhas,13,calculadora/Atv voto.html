@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+    <span id="spanText">Você votou 0 vezes</span><br> <br>
+    <button onclick="clique()">Vote aqui</button><br><br>
+    <button onclick="contador()">Atualize o contador</button><br><br>
+    <button onclick="limpar()">Zerar os votos</button><br> <br>
+    
+
+</body>
+</html>
+<script>
+var ax_clique = 0;
+function clique() {
+    ax_clique++;
+}
+function contador() {
+    spanText.innerHTML = `Você votou  ${ax_clique} vezes`;
+}
+function limpar() {
+    ax_clique = 0;
+   
+}
+
+
+</script>

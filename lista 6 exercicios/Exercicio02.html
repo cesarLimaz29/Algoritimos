@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 02</title>
+</head>
+<body>
+    <h1> Exercicio 02</h1>
+
+    <p> Quantas latinhas de refrigerante você toma por dia ? </p>
+    <input id="qtd_latas">
+    <br>
+    <br>
+    <button onclick="quantos()"> Quantos refris? </button>
+    <br>
+    <br>
+    <span id="SpanLatas"> Você consome esta quantidade de latinhas por ano: 0 </span>
+    <br>
+    <br>
+    <h3><span id="SpanText"></span></h3>
+</body>
+</html>
+
+<script>
+
+    var latinhas = 0;
+
+    function quantos(){
+        latinhas = Number(qtd_latas.value);
+        SpanLatas.innerHTML=(`Você consome esta quantidade de latinhas por ano: ${latinhas}`)
+
+        if (latinhas >= 500){
+        SpanText.innerHTML=(`Cuidado com a Tia bete (diabetes).`)
+        }    
+    }
+
+
+</script>

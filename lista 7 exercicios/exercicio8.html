@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 8</title>
+</head>
+<body>
+    <h1> Quantas pessoas estão no elevador? </h1>
+    <br>
+    <p>Digite a quantidade de homens</p>
+    <input id="ipt_homem" placeholder="Quantidade de homens">
+    <br>
+    <p>Digite a quantidade de mulheres</p>
+    <input id="ipt_mulher" placeholder="Quantidade de mulheres">
+    <br>
+    <br>
+
+    <button onclick="ligar()">Ligar elevador </button>
+    <br>
+    <br>
+
+    <span id="spanText"></span>
+</body>
+</html>
+<script>
+
+    var men = 0;
+    var gir = 0;
+
+    function ligar() {
+        var men = Number(ipt_homem.value * 90);
+        var girl = Number(ipt_mulher.value * 70);
+        var total = men + girl;
+        var sobrePeso = Number(men + girl - 500);
+
+        if (total <= 500) {
+            spanText.innerHTML = `<b style='color:green' > O elevador vai se mover, pois está com ${total} Kg.</b>`
+        }
+
+        else {
+            spanText.innerHTML = `<b style='color:red' > Alguém precisa descer. Precisa perder ${sobrePeso} Kg para mover o elevador </b>`
+
+
+
+        }
+    }
+</script>

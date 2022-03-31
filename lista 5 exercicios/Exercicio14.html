@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+    <title>Exercicio 14</title>
+</head>
+
+<body style="font-family: 'Fredoka', sans-serif;">
+
+        <h1> Exercicio 14 </h1>
+        <br>
+        <br>
+        Escolha o sabor
+        <br>
+        <select id="pizza">
+            <option value="0" selected disabled >Selecione...</option>
+            <option value="23.00">Mussarela</option>
+            <option value="24.00">Calabresa</option>
+            <option value="26.00">Atum</option>
+            <option value="30.00">Portuguesa</option>
+        </select>
+        <br><br>
+
+        Escolha um ingrediente para incrementar
+        <br>
+        <select id="inc1">
+            <option value="0" selected disabled >Selecione...</option>
+            <option value="2.00">Queijo</option>
+            <option value="2.50">Presunto</option>
+            <option value="1.50">Ovo</option>
+            <option value="4.00">Palmito</option>
+            <option value="3.50">Frango</option>
+            <option value="3.00">Catupiry</option>
+        </select>
+        <br><br>
+
+        Escolha um ingrediente para incrementar
+        <br>
+        <select id="inc2">
+            <option value="0" selected disabled >Selecione...</option>
+            <option value="2.00">Queijo</option>
+            <option value="2.50">Presunto</option>
+            <option value="1.50">Ovo</option>
+            <option value="4.00">Palmito</option>
+            <option value="3.50">Frango</option>
+            <option value="3.00">Catupiry</option>
+        </select>
+        <br><br>
+
+        Escolha um ingrediente para incrementar
+        <br>
+        <select id="inc3">
+            <option value="0" selected disabled >Selecione...</option>
+            <option value="2.00">Queijo</option>
+            <option value="2.50">Presunto</option>
+            <option value="1.50">Ovo</option>
+            <option value="4.00">Palmito</option>
+            <option value="3.50">Frango</option>
+            <option value="3.00">Catupiry</option>
+        </select>
+        <br><br>
+
+
+        <button onclick="calculo()">Calcular preço da pizza</button>
+        <br><br>
+        <span id="spanText"></span>
+
+
+
+
+    
+</body>
+
+</html>
+<script>
+
+    function calculo() {
+        var ppizza = Number(pizza.value);
+        var v1 =  Number(inc1.value);
+        var v2 =  Number(inc2.value);
+        var v3 =  Number(inc3.value);
+
+        spanText.innerHTML = `A pizza era R$ ${ppizza.toFixed(2)}, mas foi acrescido R$ ${v1.toFixed(2)}
+             do 1º incremento,
+    R$ ${v2.toFixed(2)} do 2º incremento e R$ ${v3.toFixed(2)} do 3º incremento e o <b> total</b> é de R$ ${ppizza + v1 + v2 + v3} `
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

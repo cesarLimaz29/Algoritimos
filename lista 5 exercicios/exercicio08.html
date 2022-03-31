@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+    <title>Exercicio 08</title>
+</head>
+<body style="font-family: 'Fredoka', sans-serif;">
+    <h1>Exercicio 8 </h1>
+<br>
+    <h1> Como esta meu atendimento? </h1>
+<br>
+    <select id="combo" style="width: 18%;">
+        <option value="0" selected disabled > Avalie com a quantidade de estrelas </option>
+        <option value="1">★</option>
+        <option value="2">★★ </option>
+        <option value="3">★★★ </option>
+        <option value="4">★★★★ </option>
+        <option value="5">★★★★★ </option>
+    </select>
+<br><br><br>
+    <span id="media">Média atual: 0 Estrelas </span>
+    <br><br>
+    <span id="avaliacoes">Número de avaliações: 0 </span>
+    <br><br>
+    <button onclick="confirmar()">Confirmar avaliação</button>
+</body>
+</html>
+<script>
+    var estrelas = 0;
+    var NA = 0
+
+    function confirmar(){
+        estrelas = combo.value;
+        NA ++ ;
+        avaliacoes.innerHTML = `Número de avaliações: ${NA}`
+        media.innerHTML = `Média atual: ${estrelas} Estrelas`
+    }
+
+</script>

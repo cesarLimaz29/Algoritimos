@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Exercicio 13 </title>
+</head>
+
+    <body>
+
+
+        <h1>salário bruto do usuário</h1>
+
+
+        <p style="font-size: 20px;"> salário bruto </p>
+                <input id="SLbruto" type="text"; placeholder="digite o salário bruto">
+                <br><br>
+
+                <button  onclick="mediaF();">média final </button>
+                <br><br>
+
+
+                             <br>
+
+            <span id="spanText"></span>
+
+
+        </div>
+
+
+                <br>
+
+    </body>
+</html>
+
+<script>
+
+
+function mediaF(){ 
+    spanText.innerHTML = `<span style="color: blue">Apesar de seu bruto ser 
+    <b style="color: green">R$ ${SLbruto.value}</b>, 
+    após os descontos, você receberá somente <b style="color: brown">R$
+    ${SLbruto.value * (1-0.1-0.2-1/30)}</b>.</span> `
+};
+
+
+
+
+</script>
